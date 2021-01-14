@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent"
+    tools:context=".SplashActivity">
+
+    <com.google.android.gms.ads.AdView
+        ads:layout_constraintTop_toTopOf="parent"
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+    </com.google.android.gms.ads.AdView>
+
+
+    <ImageView
+        android:id="@+id/splash_image"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/calculator"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:letterSpacing="0.1"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textColor="#000"
+        android:id="@+id/splash_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Dasturchi:Toshev Osmon"
+        app:layout_constraintBottom_toTopOf="@id/splash_text2"
+        app:layout_constraintLeft_toLeftOf="@id/splash_image"
+        app:layout_constraintRight_toRightOf="@id/splash_image"
+        tools:targetApi="lollipop" />
+
+
+    <TextView
+        android:letterSpacing="0.1"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:textAllCaps="false"
+        android:textColor="#F50A0A"
+        android:id="@+id/splash_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Tel:+998946530255"
+        app:layout_constraintLeft_toLeftOf="@id/splash_text"
+        app:layout_constraintRight_toRightOf="@id/splash_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:targetApi="lollipop" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
